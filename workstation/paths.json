@@ -1,0 +1,67 @@
+{
+  "version": "1.0",
+  "updated": "2026-07-09",
+  "canonical": {
+    "normalOS": "C:\\Users\\Admin\\normalOS",
+    "normalOSWorkstation": "C:\\Users\\Admin\\normalOS\\workstation",
+    "fusionHeroOS": "C:\\Users\\Admin\\fusion-hero-os",
+    "grokSkills": "C:\\Users\\Admin\\.grok\\skills",
+    "mcpConnectors": "C:\\Users\\Admin\\mcps",
+    "fusionProfile": "C:\\Users\\Admin\\.fusion-hero-os",
+    "pythonVenv": "C:\\Users\\Admin\\venv",
+    "python310": "C:\\Users\\Admin\\AppData\\Local\\Programs\\Python\\Python310\\python.exe"
+  },
+  "endpoints": {
+    "fusionDashboard": "http://127.0.0.1:8000",
+    "heroDocs": "http://127.0.0.1:8088",
+    "normalOSBridge": "http://127.0.0.1:8765",
+    "ollama": "http://127.0.0.1:11434",
+    "vrViewer": "http://127.0.0.1:8000/vr/viewer",
+    "vrStatus": "http://127.0.0.1:8000/api/vr/status",
+    "highestLayerVr": "http://127.0.0.1:8000/highest-layer-vr",
+    "sdWebui": "http://127.0.0.1:7860"
+  },
+  "vr": {
+    "assets_root": "C:\\Users\\Admin\\fusion-hero-os\\03_VR_Assets",
+    "load_script": "C:\\Users\\Admin\\normalOS\\workstation\\load-vr.ps1",
+    "generate_script": "C:\\Users\\Admin\\fusion-hero-os\\03_Code\\tools\\generate_missing_assets.py",
+    "asset_manifest": "C:\\Users\\Admin\\fusion-hero-os\\03_Code\\tools\\asset_manifest.yaml"
+  },
+  "tailscale": {
+    "tailnet": "tail391adb.ts.net",
+    "nodes": {
+      "desktop": {
+        "hostname": "desktop-kpki9e4",
+        "magicdns": "desktop-kpki9e4.tail391adb.ts.net",
+        "ip": "100.80.63.0",
+        "platform": "windows"
+      },
+      "phone": {
+        "hostname": "redmi-note-13-pro-5g",
+        "magicdns": "redmi-note-13-pro-5g.tail391adb.ts.net",
+        "platform": "android",
+        "login_required": "stephan95g@googlemail.com",
+        "login_warning": "Nicht GitHub — gleicher Login wie Desktop (Google)"
+      },
+      "mainframe": {
+        "hostname": "mainframe",
+        "magicdns": "mainframe.tail391adb.ts.net",
+        "platform": "linux",
+        "status": "offline"
+      }
+    }
+  },
+  "integration": {
+    "hub": "C:\\Users\\Admin\\fusion-hero-os\\fusion_integration_hub.py",
+    "unified_graph": "C:\\Users\\Admin\\fusion-hero-os\\fusion_unified.yaml",
+    "link_all": "C:\\Users\\Admin\\normalOS\\workstation\\link-all.ps1",
+    "fusion_status": "http://127.0.0.1:8088/fusion/status",
+    "fusion_graph": "http://127.0.0.1:8088/fusion/graph"
+  },
+  "archived_duplicates": {
+    "fusion-hero-os-llm-push": "C:\\Users\\Admin\\fusion-hero-os-llm-push",
+    "fusion-hero-core": "C:\\Users\\Admin\\fusion-hero-core",
+    "hero-os": "C:\\Users\\Admin\\hero-os",
+    "note": "Veraltet — nutze fusion-hero-os als einzige Quelle"
+  }
+}

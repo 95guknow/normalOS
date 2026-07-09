@@ -62,6 +62,30 @@ python -m src.normal_os.bridge.grok_pc_bridge
 - Resource monitoring + process listing
 - Integration into normalOS Orchestrator as native BridgeAgent
 
+## Workstation (Windows PC)
+
+Local ops live under `workstation/` — start scripts, path registry, Tailscale checks, VR load, desktop restore.
+
+```powershell
+# Env + Status
+.\workstation\load-env.ps1
+.\workstation\status.ps1
+
+# Start Fusion + Bridge + Docs
+.\workstation\start-normalos.ps1
+
+# VR layer (audit / generate assets)
+.\workstation\load-vr.ps1
+.\workstation\load-vr.ps1 -Generate
+
+# Link mesh + integration hub
+.\workstation\link-all.ps1
+```
+
+Canonical config: `workstation/paths.json` (endpoints, Tailscale nodes, Fusion Hub links).
+
+Copy `workstation/.env.example` → `workstation/.env` for API keys (never commit `.env`).
+
 ## Status
 
 **v1.0 COMPLETE** — All major practical patterns from the Horkrux are now explicit, clean, and usable.

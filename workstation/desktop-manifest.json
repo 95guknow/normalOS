@@ -1,0 +1,41 @@
+{
+  "version": "1.0",
+  "date": "2026-07-09",
+  "description": "Original-Desktop vor Aufräumen — 82 Dateien + 13 Projektordner",
+  "files": [
+    "ALTE_Frau_95g_Start.bat", "FusionHero_LlamaLocal_Start.bat", "GEZ.docx",
+    "Der_Heroische_Mensch.exe", "Firefox.exe", "ALTE_Frau_95g_Launcher.html",
+    "algorithm_optimization_analysis.ipynb", "data.jsonl", "ALTE_Frau_95g_Launcher.py",
+    "projekt_archiv.zip", "Adwcleaner.lnk", "Antigravity.lnk", "Chrome Remote Desktop.lnk",
+    "Discord.lnk", "GitHub Desktop.lnk", "Google Drive.lnk", "Kepler.lnk",
+    "MSI Afterburner.lnk", "NiceHash QuickMiner.lnk", "Rockstar Games Launcher.lnk",
+    "Scrivener.lnk", "SpeedFan.lnk", "Start Tor Browser.lnk", "TeamSpeak Overlay.lnk",
+    "Telegram.lnk", "UserBenchmark.lnk", "Visual Studio Code.lnk",
+    "Widelands - Mapeditor.lnk", "Widelands.lnk",
+    "Call of Duty WWII.url", "Counter-Strike Global Offensive.url",
+    "Crash BandicootT N. Sane Trilogy.url", "Mafia.url", "VZX Player.url",
+    "DisplayPDF (1).pdf", "Geisteskrankheiten_4D_Matrix_v5_vollstaendig.md",
+    "Geisteskrankheiten_4D_Matrix_v5_vollstaendig.pdf", "Geisteskrankheiten_4D_Matrix_v6_vollstaendig.md",
+    "Geisteskrankheiten_4D_Matrix_v6_vollstaendig.pdf", "Geisteskrankheiten_4D_Matrix_v7_Kompendium.md",
+    "Geisteskrankheiten_4D_Matrix_v7_Kompendium.pdf", "Geisteskrankheiten_4D_Matrix_v7_Kompendium_mit_Grafiken.pdf",
+    "Geisteskrankheiten_4D_Matrix_v7_vollstaendig.md", "Geisteskrankheiten_4D_Matrix_v7_vollstaendig.pdf",
+    "Heroik_Wissenschaft_Claude_Science_Audit.md", "konto.pdf", "nw_BuFDi.pdf",
+    "Schenkung_Klein_Pribus.pdf", "vertrag_shu_huh_cbe.pdf", "Windows 10 Aktivierungsschlüssel.pdf",
+    "0cd19b70fdaca94779e029804b6595d509117b277feeab938122e2c0e55898e1_1.jpg",
+    "514e2b000d810498.jpg", "9f948f6400770078.jpg", "auge.JPG", "confiteor.JPG", "db.JPG",
+    "fruitninja.jpg", "hegel.JPG", "hegel2.JPG", "instapr0.JPG", "level9.JPG", "mmwewy5aklxe1.jpg",
+    "pali.JPG", "pyro.JPG", "sdfg.JPG", "sui.JPG", "asdf.png", "JBP_detrans.png", "kenya.png",
+    "Unbenannt.png", "vertrag1.PNG", "vertrag2.PNG", "vertrag3.PNG",
+    "22ea1e66f37cf744.mp4", "7390d30e40dbc550.mp4", "acb8e4aa00009179.mp4",
+    "bf063b680ba843c2.mp4", "f588af7e91b75ef2.mp4", "katze.mp4",
+    "_cred_debug.log", "_cred_helper.py", "_cred_helper2.py", "_cred_helper3.py",
+    "temp_write.py", "app_py.b64", "_launcher.py", "_launcher (1).py"
+  ],
+  "folders": [
+    "ALTE_Frau_95g_Beste_Version", "bahntickets", "best-FuHOS", "bewerbungen",
+    "crypto_wallet", "FusionHero_LlamaLocal", "Fusion_Hero_OS_v1.1", "MER_Grafiken",
+    "Paragraph 130", "projekt_archiv", "replays",
+    "RKI-Krisenstab-Einzelsitzungen_2020-2023", "Tor Browser"
+  ],
+  "keep_on_desktop": ["normalOS", "Apps"]
+}

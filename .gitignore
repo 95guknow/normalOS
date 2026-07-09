@@ -44,3 +44,9 @@ htmlcov/
 # OS
 .DS_Store
 Thumbs.db
+
+# Workstation runtime (secrets + logs)
+workstation/.env
+workstation/*-log.txt
+workstation/disk-audit.txt
+workstation/_last_hub_status.json

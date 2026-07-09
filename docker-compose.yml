@@ -1,11 +1,10 @@
-version: "3.9"
+version: '3.9'
 services:
   normalos:
     build: .
     ports:
       - "8000:8000"
-    environment:
-      - LOG_LEVEL=INFO
     volumes:
-      - ./normalos.db:/app/normalos.db
-    restart: unless-stopped
+      - ./data:/app/data
+    environment:
+      - ENVIRONMENT=production

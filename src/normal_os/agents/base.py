@@ -1,33 +1,29 @@
+"""
+BaseAgent for normalOS
+
+All agents inherit from this. Now extended with optional
+connector access so agents can autonomously use external services
+(GitHub, Drive, Notion, PC-Bridge, etc.).
+"""
+
 from abc import ABC, abstractmethod
-from typing import Any
-from normal_os.core.models import Task
+from typing import Any, Dict, Optional
 
-import structlog
-
-logger = structlog.get_logger(__name__)
+from ..connectors.registry import ConnectorRegistry
 
 
 class BaseAgent(ABC):
-    """Explicit base class for all agents. Forces clear interface."""
+    """Base class for all agents in normalOS."""
 
-    name: str = "base"
-    capabilities: list[str] = []
-
-    def __init__(self, **kwargs: Any):
-        self.config = kwargs
-        logger.info("agent_initialized", name=self.name)
+    def __init__(self, name: str, connector_registry: Optional[ConnectorRegistry] = None):
+        self.name = name
+        self.connector_registry = connector_registry or ConnectorRegistry()
 
     @abstractmethod
-    async def run(self, task: Task) -> dict[str, Any]:
-        """Execute a task and return result. Must be implemented by subclasses."""
+    async def run(self, task: Dict[str, Any]) -> Dict[str, Any]:
+        """Execute the agent's main logic."""
         pass
 
-    def status(self) -> dict[str, Any]:
-        return {
-            "name": self.name,
-            "capabilities": self.capabilities,
-            "status": "idle",
-        }
-
-    async def health_check(self) -> bool:
-        return True
+    def get_connector(self, name: str):
+        """Convenience method for agents to access connectors."""
+        return self.connector_registry.get(name)

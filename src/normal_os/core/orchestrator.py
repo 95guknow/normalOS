@@ -1,26 +1,38 @@
-"""Main orchestrator coordinating LLM, optimization and agents.
+"""
+Main orchestrator coordinating LLM, optimization, agents and now connectors.
 
-Clean, pragmatic implementation.
+Expanded autonomously to integrate all external connectors
+and the GrokPCBridge as first-class citizens.
 """
 
-from typing import Any
+from typing import Any, Dict, Optional
 
 import structlog
 
 from ..llm.router import LLMRouter
 from ..optimization.qubo_solver import QUBOSolver
+from ..agents.registry import AgentRegistry
+from ..connectors.registry import ConnectorRegistry
 from ..core.models import Task, OptimizationResult
 
 logger = structlog.get_logger()
 
 
 class Orchestrator:
-    """High-level coordinator for normalOS."""
+    """High-level coordinator for normalOS (expanded)."""
 
     def __init__(self):
         self.llm = LLMRouter()
         self.qubo = QUBOSolver()
+        self.agents = AgentRegistry()
+        self.connectors = ConnectorRegistry()
         self.tasks: list[Task] = []
+
+    async def initialize_connectors(self):
+        """Connect all enabled external connectors at startup."""
+        results = await self.connectors.connect_all()
+        logger.info("connectors_initialized", results=results)
+        return results
 
     async def add_task(self, description: str, priority: int = 5, **kwargs) -> Task:
         task = Task(description=description, priority=priority, **kwargs)
@@ -36,7 +48,6 @@ class Orchestrator:
         return result
 
     async def run_task_with_llm(self, task: Task, prompt: str) -> dict[str, Any]:
-        """Execute a task by calling an LLM."""
         task.status = "running"
         try:
             response = await self.llm.generate(prompt)
@@ -51,6 +62,14 @@ class Orchestrator:
             task.status = "failed"
             logger.error("task_failed", task_id=task.id, error=str(e))
             raise
+
+    async def use_connector(self, connector_name: str, action: str, params: dict) -> dict:
+        """Execute an action on any registered connector."""
+        connector = self.connectors.get(connector_name)
+        if not connector:
+            raise ValueError(f"Connector '{connector_name}' not found")
+        result = await connector.execute(action, params)
+        return result.model_dump()
 
     async def close(self):
         await self.llm.close()

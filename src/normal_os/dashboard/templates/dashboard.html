@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>normalOS Dashboard</title>
+    <script src="https://unpkg.com/htmx.org@1.9.12"></script>
+    <style>
+        body { font-family: system-ui, -apple-system, sans-serif; background: #f8fafc; margin: 0; padding: 40px; }
+        .container { max-width: 1100px; margin: 0 auto; }
+        h1 { color: #0f172a; }
+        .card { background: white; border-radius: 12px; padding: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-bottom: 24px; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { padding: 12px; text-align: left; border-bottom: 1px solid #e2e8f0; }
+        .status-pending { color: #d97706; }
+        .status-running { color: #2563eb; }
+        .status-completed { color: #059669; }
+        .status-failed { color: #dc2626; }
+        form { display: flex; gap: 12px; align-items: flex-end; }
+        input, select { padding: 8px 12px; border: 1px solid #cbd5e1; border-radius: 6px; }
+        button { padding: 10px 20px; background: #0ea5e9; color: white; border: none; border-radius: 6px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>normalOS <span style="color:#64748b; font-weight:400;">Dashboard</span></h1>
+        <p style="color:#64748b;">v0.2.0 • Clean AI orchestration framework</p>
+
+        <div class="card">
+            <h2 style="margin-top:0;">Create New Task</h2>
+            <form hx-post="/tasks" hx-target="#task-list" hx-swap="outerHTML">
+                <div>
+                    <label>Description</label><br>
+                    <input type="text" name="description" placeholder="Describe the task..." style="width: 420px;" required>
+                </div>
+                <div>
+                    <label>Priority (1-10)</label><br>
+                    <input type="number" name="priority" value="5" min="1" max="10" style="width: 80px;">
+                </div>
+                <button type="submit">Create Task</button>
+            </form>
+        </div>
+
+        <div class="card">
+            <h2 style="margin-top:0; display:flex; justify-content:space-between; align-items:center;">
+                Recent Tasks
+                <button hx-get="/tasks" hx-target="#task-list" hx-swap="outerHTML" 
+                        style="padding:6px 14px; font-size:0.85rem; background:#64748b;">
+                    Refresh
+                </button>
+            </h2>
+            <div id="task-list">
+                {% include "partials/task_list.html" %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>

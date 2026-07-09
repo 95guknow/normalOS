@@ -1,58 +1,56 @@
 # normalOS
 
-**Practical AI Agent Orchestration Framework**
+**Practical AI Agent Orchestration Framework** (v0.2.0)
 
-Clean, production-oriented implementation of multi-LLM routing, QUBO-based task optimization and a modern monitoring dashboard.
-
-Written like a senior Python developer would have done it in March 2026.
+Clean, production-oriented implementation written like a senior developer would have done it in March 2026.
 
 ## Features
 
-- Clean multi-provider LLM router (OpenAI, Anthropic, Grok, local models via Ollama)
-- QUBO optimization layer for task prioritization and resource allocation
-- FastAPI-based dashboard with real-time status
-- Strong typing with Pydantic v2
-- Simple but extensible agent system
-- Good defaults + full configurability
+- Multi-LLM router (Grok, OpenAI, Anthropic, Ollama)
+- QUBO-based task optimization
+- Async SQLite persistence
+- Simple but extensible Agent system
+- FastAPI + HTMX dashboard (no heavy frontend framework)
+- Docker support
 
-## Quick Start
+## Quick Start (with Docker)
 
 ```bash
 git clone https://github.com/95guknow/normalOS.git
 cd normalOS
-python -m venv .venv
-source .venv/bin/activate
-pip install -e .
-
-# Run dashboard
-python -m normal_os.dashboard.app
+docker compose up --build
 ```
 
 Then open http://localhost:8000
 
-## Architecture (March 2026 style)
+## Local Development
 
-```
-normal_os/
-├── core/           # Config, models, orchestrator
-├── llm/            # Multi-provider router + clients
-├── optimization/   # QUBO solver + task optimizer
-├── agents/         # Agent definitions & registry
-├── dashboard/      # FastAPI + simple frontend
-└── utils/
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -e ".[test]"
+
+python -m normal_os.dashboard.app
 ```
 
-## Tech Stack
+## Architecture
 
-- Python 3.12+
-- Pydantic v2 + FastAPI
-- httpx (async HTTP)
-- dimod (QUBO modeling) + optional D-Wave
-- pytest + ruff
+```
+src/normal_os/
+├── core/            # Config + models
+├── llm/             # Multi-provider router
+├── optimization/    # QUBO solver
+├── agents/          # BaseAgent + registry + examples
+├── persistence/     # Async SQLite task store
+├── dashboard/       # FastAPI + HTMX templates
+└── orchestrator.py
+```
 
-## Configuration
+## Next Steps (typical for this kind of project)
 
-All configuration via environment variables or `.env` file (Pydantic Settings).
+- Add real background task execution
+- Integrate vector store (Qdrant / Chroma)
+- Add evaluation / tracing
+- Proper auth for dashboard
 
-## License
-MIT
+MIT License

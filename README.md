@@ -2,44 +2,21 @@
 
 **Clean, explicit, production-oriented orchestration and optimization platform.**
 
-Extracted and normalized from the Fusion Hero OS Horkrux. All implicit high-value patterns made explicit, clean, and usable.
+All high-value practical functions from the Fusion Hero OS Horkrux have been extracted, normalized, and made explicit.
 
-## Core Principles
+## Included Core Capabilities (v1.0)
 
-- Explicit over implicit
-- Strong typing + clean architecture
-- Async-first with proper resource control
-- Production-ready structure (March 2026 style)
-
-## Architecture
-
-- `core/` — Config, Models, Orchestrator
-- `agents/` — BaseAgent + explicit Registry
-- `executor/` — TaskExecutor + WorkerPool
-- `persistence/` — TaskStore + ContextStore + History
-- `optimization/` — QUBOSolver (dimod + caching)
-- `llm/` — Multi-provider Router + Structured Output
-- `dashboard/` — FastAPI + HTMX (live updates)
-- `cli/` — Full Typer CLI
-
-## Quickstart
-
-```bash
-uv sync
-normalos --help
-uvicorn src.normal_os.dashboard.app:app --reload
-```
-
-## Key Features (v1.0)
-
-- Async Task execution with retry, cancellation, resource budgeting
-- Persistent Context + Result History
-- QUBO optimization with caching
-- Multi-LLM routing foundation
-- Structured output enforcement
-- HTMX live dashboard
-- Powerful CLI
+- Async Task Execution with retry, cancellation, resource budgeting
+- Persistent Task + Faden/Context + History storage
+- Advanced QUBO solving with caching
+- Coevolution routing foundation
+- Multi-LLM routing + Structured Output enforcement
+- Agent Registry + BaseAgent pattern
+- Worker Pool
+- HTMX Dashboard (live updates)
+- Full Typer CLI
+- Docker ready
 
 ## Status
 
-**v1.0 ready** — Core systems stable and explicit.
+**v1.0 COMPLETE** — All major practical patterns from the Horkrux are now explicit, clean, and usable.

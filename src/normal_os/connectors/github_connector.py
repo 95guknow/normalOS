@@ -1,61 +1,86 @@
 """
 GitHub Connector for normalOS
 
-Explicit, clean wrapper around available GitHub connected tools.
-Allows the Fusion Hero OS / Orchestrator to autonomously interact
-with GitHub repositories (create, push, search, read, etc.).
-
-This connector makes the previously implicit GitHub access fully explicit
-and usable by agents.
+Referenzimplementierung des Vault-Broker-Musters: kein Secret aus os.environ,
+kein Caching im Connector selbst. Jede execute()-Anfrage holt sich (ueber den
+Vault-Client mit eigenem Lease-Cache) frisch ein kurzlebiges Credential; ist
+keins verfuegbar (kein Grant, Vault nicht konfiguriert, Token abgelaufen),
+bleibt der Connector im DRY-RUN — es findet garantiert kein echter API-Call
+statt.
 """
 
-from typing import Any, Dict, List, Optional
-import asyncio
+from typing import Any, Dict, Optional
+
+import httpx
 
 from .base import BaseConnector, ConnectorConfig, ConnectorResult
 
 
 class GitHubConnector(BaseConnector):
-    """Connector for GitHub operations via connected tools."""
+    """Connector fuer GitHub-Operationen, Credential kommt aus dem Vault."""
+
+    service_key = "github"
 
     def __init__(self, config: Optional[ConnectorConfig] = None):
         super().__init__(config)
         self.name = "GitHubConnector"
-        # In real usage this would hold authenticated client
-        # For now we document the available actions explicitly
 
     async def connect(self) -> ConnectorResult:
+        token = await self.require_credential()
+        self._connected = token is not None
         return ConnectorResult(
             success=True,
-            data={"status": "connected", "service": "github"},
-            metadata={"note": "Uses existing connected GitHub tools"}
+            data={"status": "connected" if token else "dry_run", "service": "github"},
+            metadata={"connector": self.name, "has_credential": token is not None},
         )
 
     async def disconnect(self) -> ConnectorResult:
+        self._connected = False
         return ConnectorResult(success=True, data={"status": "disconnected"})
 
     async def execute(self, action: str, params: Dict[str, Any]) -> ConnectorResult:
         """
-        Execute GitHub actions.
-
-        Supported actions (will be expanded):
+        Unterstuetzte Aktionen (werden erweitert):
+        - list_repos
         - get_repo_tree
         - get_file_contents
-        - search_code
-        - create_repository
-        - push_files
-        - list_repos
         """
         action = action.lower()
+        token = await self.require_credential()
 
-        # Placeholder for real implementation using call_connected_tool
-        # In production this would route to the actual GitHub MCP tools
-        return ConnectorResult(
-            success=True,
-            data={
-                "action": action,
-                "params": params,
-                "note": "Action routed to GitHub connected tools"
-            },
-            metadata={"connector": self.name}
-        )
+        if token is None:
+            return self.dry_run_result(
+                action, params,
+                reason="Kein Vault-Grant/Credential fuer 'github' verfuegbar",
+                connector_name=self.name,
+            )
+
+        headers = {
+            "Authorization": f"Bearer {token}",
+            "Accept": "application/vnd.github+json",
+        }
+        try:
+            async with httpx.AsyncClient(timeout=self.config.timeout_seconds) as client:
+                if action == "list_repos":
+                    resp = await client.get("https://api.github.com/user/repos", headers=headers)
+                elif action == "get_repo_tree":
+                    owner, repo = params["owner"], params["repo"]
+                    ref = params.get("ref", "HEAD")
+                    resp = await client.get(
+                        f"https://api.github.com/repos/{owner}/{repo}/git/trees/{ref}",
+                        headers=headers, params={"recursive": params.get("recursive", "1")},
+                    )
+                elif action == "get_file_contents":
+                    owner, repo, path = params["owner"], params["repo"], params["path"]
+                    resp = await client.get(
+                        f"https://api.github.com/repos/{owner}/{repo}/contents/{path}",
+                        headers=headers,
+                    )
+                else:
+                    return ConnectorResult(success=False, error=f"Unbekannte Aktion: {action}")
+
+            if resp.status_code >= 400:
+                return ConnectorResult(success=False, error=f"GitHub API {resp.status_code}: {resp.text}")
+            return ConnectorResult(success=True, data=resp.json(), metadata={"connector": self.name})
+        except Exception as e:  # noqa: BLE001
+            return ConnectorResult(success=False, error=str(e))

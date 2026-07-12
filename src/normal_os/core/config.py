@@ -44,6 +44,7 @@ class BridgeConfig(BaseModel):
 
 class NormalOSConfig(BaseModel):
     """Root configuration for the entire system."""
+    app_name: str = "normalOS"
     environment: str = "development"
     llm: LLMConfig = Field(default_factory=LLMConfig)
     connectors: ConnectorConfig = Field(default_factory=ConnectorConfig)
@@ -51,3 +52,7 @@ class NormalOSConfig(BaseModel):
     persistence: PersistenceConfig = Field(default_factory=PersistenceConfig)
     bridge: BridgeConfig = Field(default_factory=BridgeConfig)
     extra: Dict[str, Any] = Field(default_factory=dict)
+
+
+# Globale Singleton-Instanz — wird von CLI und Dashboard importiert
+settings = NormalOSConfig()

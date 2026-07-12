@@ -20,8 +20,9 @@ qubo_solver = QUBOSolver()
 async def dashboard(request: Request):
     tasks = await executor.store.list_by_status("pending")  # simplified
     return templates.TemplateResponse(
+        request,
         "dashboard.html",
-        {"request": request, "tasks": tasks, "app_name": settings.app_name}
+        {"tasks": tasks, "app_name": settings.app_name}
     )
 
 

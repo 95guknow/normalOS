@@ -1,3 +1,6 @@
+# Laufzeitdaten (lokale SQLite-DB, generiert)
+data/
+
 # Python
 __pycache__/
 *.py[cod]

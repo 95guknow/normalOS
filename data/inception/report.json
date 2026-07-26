@@ -1,0 +1,967 @@
+{
+  "protocol": "inception-archive-protocol",
+  "version": 1,
+  "kicks": 5,
+  "duration_s": 2.044,
+  "counts": {
+    "total": 119,
+    "awake": 54,
+    "dreaming": 18,
+    "limbo": 47
+  },
+  "deepest_layer": 1,
+  "verdicts": [
+    {
+      "archive_id": "claim:bridge",
+      "state": "limbo",
+      "layer": -1,
+      "totem": "lost",
+      "reason": "totem lost: backing failed: ModuleNotFoundError: No module named 'fastapi'",
+      "ascent_round": 0
+    },
+    {
+      "archive_id": "claim:bridge-streaming",
+      "state": "limbo",
+      "layer": -1,
+      "totem": "lost",
+      "reason": "unfalsifiable: no acceptance criterion could be stated, so no heroic goal and no code exist to check",
+      "ascent_round": 0
+    },
+    {
+      "archive_id": "claim:cli",
+      "state": "limbo",
+      "layer": -1,
+      "totem": "lost",
+      "reason": "totem lost: backing failed: ModuleNotFoundError: No module named 'typer'",
+      "ascent_round": 0
+    },
+    {
+      "archive_id": "claim:connectors",
+      "state": "limbo",
+      "layer": -1,
+      "totem": "lost",
+      "reason": "totem lost: backing failed: ModuleNotFoundError: No module named 'pydantic'",
+      "ascent_round": 0
+    },
+    {
+      "archive_id": "claim:dashboard",
+      "state": "limbo",
+      "layer": -1,
+      "totem": "lost",
+      "reason": "totem lost: backing failed: ModuleNotFoundError: No module named 'fastapi'",
+      "ascent_round": 0
+    },
+    {
+      "archive_id": "claim:docker",
+      "state": "active",
+      "layer": 0,
+      "totem": "fell",
+      "reason": "reproducible backing, resting only on the waking world",
+      "ascent_round": 1
+    },
+    {
+      "archive_id": "claim:executor",
+      "state": "limbo",
+      "layer": -1,
+      "totem": "lost",
+      "reason": "totem lost: backing failed: ModuleNotFoundError: No module named 'structlog'",
+      "ascent_round": 0
+    },
+    {
+      "archive_id": "claim:filterung",
+      "state": "limbo",
+      "layer": -1,
+      "totem": "lost",
+      "reason": "unfalsifiable: no acceptance criterion could be stated, so no heroic goal and no code exist to check",
+      "ascent_round": 0
+    },
+    {
+      "archive_id": "claim:horkrux-mesh",
+      "state": "limbo",
+      "layer": -1,
+      "totem": "lost",
+      "reason": "unfalsifiable: no acceptance criterion could be stated, so no heroic goal and no code exist to check",
+      "ascent_round": 0
+    },
+    {
+      "archive_id": "claim:inception-protocol",
+      "state": "active",
+      "layer": 0,
+      "totem": "fell",
+      "reason": "reproducible backing, resting only on the waking world",
+      "ascent_round": 2
+    },
+    {
+      "archive_id": "claim:persistence",
+      "state": "limbo",
+      "layer": -1,
+      "totem": "lost",
+      "reason": "totem lost: backing failed: ModuleNotFoundError: No module named 'aiosqlite'",
+      "ascent_round": 0
+    },
+    {
+      "archive_id": "claim:qubo",
+      "state": "limbo",
+      "layer": -1,
+      "totem": "lost",
+      "reason": "totem lost: backing failed: ModuleNotFoundError: No module named 'dimod'",
+      "ascent_round": 0
+    },
+    {
+      "archive_id": "claim:sisyphos",
+      "state": "limbo",
+      "layer": -1,
+      "totem": "lost",
+      "reason": "unfalsifiable: no acceptance criterion could be stated, so no heroic goal and no code exist to check",
+      "ascent_round": 0
+    },
+    {
+      "archive_id": "claim:workstation",
+      "state": "active",
+      "layer": 0,
+      "totem": "fell",
+      "reason": "reproducible backing, resting only on the waking world",
+      "ascent_round": 1
+    },
+    {
+      "archive_id": "dream:normal_os.agents.base",
+      "state": "dreaming",
+      "layer": 1,
+      "totem": "fell",
+      "reason": "coherent, but only inside an injected dream -- verified at layer 1, never against reality",
+      "ascent_round": 1
+    },
+    {
+      "archive_id": "dream:normal_os.agents.connector_agent",
+      "state": "dreaming",
+      "layer": 1,
+      "totem": "fell",
+      "reason": "coherent, but only inside an injected dream -- verified at layer 1, never against reality",
+      "ascent_round": 1
+    },
+    {
+      "archive_id": "dream:normal_os.agents.example_agents",
+      "state": "limbo",
+      "layer": -1,
+      "totem": "lost",
+      "reason": "totem lost: backing failed: ImportError: cannot import name 'registry' from 'normal_os.agents.base' (/home/user/normalOS/src/normal_os/agents/base.py)",
+      "ascent_round": 0
+    },
+    {
+      "archive_id": "dream:normal_os.agents.registry",
+      "state": "dreaming",
+      "layer": 1,
+      "totem": "fell",
+      "reason": "coherent, but only inside an injected dream -- verified at layer 1, never against reality",
+      "ascent_round": 1
+    },
+    {
+      "archive_id": "dream:normal_os.bridge",
+      "state": "dreaming",
+      "layer": 1,
+      "totem": "fell",
+      "reason": "coherent, but only inside an injected dream -- verified at layer 1, never against reality",
+      "ascent_round": 1
+    },
+    {
+      "archive_id": "dream:normal_os.bridge.grok_pc_bridge",
+      "state": "dreaming",
+      "layer": 1,
+      "totem": "fell",
+      "reason": "coherent, but only inside an injected dream -- verified at layer 1, never against reality",
+      "ascent_round": 1
+    },
+    {
+      "archive_id": "dream:normal_os.cli.main",
+      "state": "limbo",
+      "layer": -1,
+      "totem": "lost",
+      "reason": "totem lost: backing failed: ImportError: cannot import name 'settings' from 'normal_os.core.config' (/home/user/normalOS/src/normal_os/core/config.py)",
+      "ascent_round": 0
+    },
+    {
+      "archive_id": "dream:normal_os.connectors",
+      "state": "dreaming",
+      "layer": 1,
+      "totem": "fell",
+      "reason": "coherent, but only inside an injected dream -- verified at layer 1, never against reality",
+      "ascent_round": 1
+    },
+    {
+      "archive_id": "dream:normal_os.connectors.base",
+      "state": "dreaming",
+      "layer": 1,
+      "totem": "fell",
+      "reason": "coherent, but only inside an injected dream -- verified at layer 1, never against reality",
+      "ascent_round": 1
+    },
+    {
+      "archive_id": "dream:normal_os.connectors.github_connector",
+      "state": "dreaming",
+      "layer": 1,
+      "totem": "fell",
+      "reason": "coherent, but only inside an injected dream -- verified at layer 1, never against reality",
+      "ascent_round": 1
+    },
+    {
+      "archive_id": "dream:normal_os.connectors.google_drive_connector",
+      "state": "dreaming",
+      "layer": 1,
+      "totem": "fell",
+      "reason": "coherent, but only inside an injected dream -- verified at layer 1, never against reality",
+      "ascent_round": 1
+    },
+    {
+      "archive_id": "dream:normal_os.connectors.notion_connector",
+      "state": "dreaming",
+      "layer": 1,
+      "totem": "fell",
+      "reason": "coherent, but only inside an injected dream -- verified at layer 1, never against reality",
+      "ascent_round": 1
+    },
+    {
+      "archive_id": "dream:normal_os.connectors.pc_bridge_connector",
+      "state": "dreaming",
+      "layer": 1,
+      "totem": "fell",
+      "reason": "coherent, but only inside an injected dream -- verified at layer 1, never against reality",
+      "ascent_round": 1
+    },
+    {
+      "archive_id": "dream:normal_os.connectors.registry",
+      "state": "dreaming",
+      "layer": 1,
+      "totem": "fell",
+      "reason": "coherent, but only inside an injected dream -- verified at layer 1, never against reality",
+      "ascent_round": 1
+    },
+    {
+      "archive_id": "dream:normal_os.core.coevolution",
+      "state": "dreaming",
+      "layer": 1,
+      "totem": "fell",
+      "reason": "coherent, but only inside an injected dream -- verified at layer 1, never against reality",
+      "ascent_round": 1
+    },
+    {
+      "archive_id": "dream:normal_os.core.config",
+      "state": "dreaming",
+      "layer": 1,
+      "totem": "fell",
+      "reason": "coherent, but only inside an injected dream -- verified at layer 1, never against reality",
+      "ascent_round": 1
+    },
+    {
+      "archive_id": "dream:normal_os.core.models",
+      "state": "limbo",
+      "layer": -1,
+      "totem": "lost",
+      "reason": "totem lost: backing failed: TypeError: Cannot subclass typing.Literal",
+      "ascent_round": 0
+    },
+    {
+      "archive_id": "dream:normal_os.core.orchestrator",
+      "state": "limbo",
+      "layer": -1,
+      "totem": "lost",
+      "reason": "totem lost: backing failed: TypeError: Cannot subclass typing.Literal",
+      "ascent_round": 0
+    },
+    {
+      "archive_id": "dream:normal_os.dashboard.app",
+      "state": "limbo",
+      "layer": -1,
+      "totem": "lost",
+      "reason": "totem lost: backing failed: ImportError: cannot import name 'settings' from 'normal_os.core.config' (/home/user/normalOS/src/normal_os/core/config.py)",
+      "ascent_round": 0
+    },
+    {
+      "archive_id": "dream:normal_os.executor.task_executor",
+      "state": "limbo",
+      "layer": -1,
+      "totem": "lost",
+      "reason": "totem lost: backing failed: TypeError: Cannot subclass typing.Literal",
+      "ascent_round": 0
+    },
+    {
+      "archive_id": "dream:normal_os.llm.router",
+      "state": "dreaming",
+      "layer": 1,
+      "totem": "fell",
+      "reason": "coherent, but only inside an injected dream -- verified at layer 1, never against reality",
+      "ascent_round": 1
+    },
+    {
+      "archive_id": "dream:normal_os.optimization.advanced_qubo",
+      "state": "limbo",
+      "layer": -1,
+      "totem": "lost",
+      "reason": "totem lost: backing failed: TypeError: Cannot subclass typing.Literal",
+      "ascent_round": 0
+    },
+    {
+      "archive_id": "dream:normal_os.optimization.qubo_solver",
+      "state": "limbo",
+      "layer": -1,
+      "totem": "lost",
+      "reason": "totem lost: backing failed: TypeError: Cannot subclass typing.Literal",
+      "ascent_round": 0
+    },
+    {
+      "archive_id": "dream:normal_os.persistence.context_store",
+      "state": "dreaming",
+      "layer": 1,
+      "totem": "fell",
+      "reason": "coherent, but only inside an injected dream -- verified at layer 1, never against reality",
+      "ascent_round": 1
+    },
+    {
+      "archive_id": "dream:normal_os.persistence.faden_store",
+      "state": "dreaming",
+      "layer": 1,
+      "totem": "fell",
+      "reason": "coherent, but only inside an injected dream -- verified at layer 1, never against reality",
+      "ascent_round": 1
+    },
+    {
+      "archive_id": "dream:normal_os.persistence.task_store",
+      "state": "limbo",
+      "layer": -1,
+      "totem": "lost",
+      "reason": "totem lost: backing failed: TypeError: Cannot subclass typing.Literal",
+      "ascent_round": 0
+    },
+    {
+      "archive_id": "dream:normal_os.structured_output",
+      "state": "dreaming",
+      "layer": 1,
+      "totem": "fell",
+      "reason": "coherent, but only inside an injected dream -- verified at layer 1, never against reality",
+      "ascent_round": 1
+    },
+    {
+      "archive_id": "module:normal_os",
+      "state": "active",
+      "layer": 0,
+      "totem": "fell",
+      "reason": "reproducible backing, resting only on the waking world",
+      "ascent_round": 1
+    },
+    {
+      "archive_id": "module:normal_os.agents.base",
+      "state": "limbo",
+      "layer": -1,
+      "totem": "lost",
+      "reason": "totem lost: backing failed: ModuleNotFoundError: No module named 'pydantic'",
+      "ascent_round": 0
+    },
+    {
+      "archive_id": "module:normal_os.agents.connector_agent",
+      "state": "limbo",
+      "layer": -1,
+      "totem": "lost",
+      "reason": "totem lost: backing failed: ModuleNotFoundError: No module named 'pydantic'",
+      "ascent_round": 0
+    },
+    {
+      "archive_id": "module:normal_os.agents.example_agents",
+      "state": "limbo",
+      "layer": -1,
+      "totem": "lost",
+      "reason": "totem lost: backing failed: ModuleNotFoundError: No module named 'pydantic'",
+      "ascent_round": 0
+    },
+    {
+      "archive_id": "module:normal_os.agents.registry",
+      "state": "limbo",
+      "layer": -1,
+      "totem": "lost",
+      "reason": "totem lost: backing failed: ModuleNotFoundError: No module named 'pydantic'",
+      "ascent_round": 0
+    },
+    {
+      "archive_id": "module:normal_os.bridge",
+      "state": "limbo",
+      "layer": -1,
+      "totem": "lost",
+      "reason": "totem lost: backing failed: ModuleNotFoundError: No module named 'fastapi'",
+      "ascent_round": 0
+    },
+    {
+      "archive_id": "module:normal_os.bridge.grok_pc_bridge",
+      "state": "limbo",
+      "layer": -1,
+      "totem": "lost",
+      "reason": "totem lost: backing failed: ModuleNotFoundError: No module named 'fastapi'",
+      "ascent_round": 0
+    },
+    {
+      "archive_id": "module:normal_os.cli.main",
+      "state": "limbo",
+      "layer": -1,
+      "totem": "lost",
+      "reason": "totem lost: backing failed: ModuleNotFoundError: No module named 'typer'",
+      "ascent_round": 0
+    },
+    {
+      "archive_id": "module:normal_os.connectors",
+      "state": "limbo",
+      "layer": -1,
+      "totem": "lost",
+      "reason": "totem lost: backing failed: ModuleNotFoundError: No module named 'pydantic'",
+      "ascent_round": 0
+    },
+    {
+      "archive_id": "module:normal_os.connectors.base",
+      "state": "limbo",
+      "layer": -1,
+      "totem": "lost",
+      "reason": "totem lost: backing failed: ModuleNotFoundError: No module named 'pydantic'",
+      "ascent_round": 0
+    },
+    {
+      "archive_id": "module:normal_os.connectors.github_connector",
+      "state": "limbo",
+      "layer": -1,
+      "totem": "lost",
+      "reason": "totem lost: backing failed: ModuleNotFoundError: No module named 'pydantic'",
+      "ascent_round": 0
+    },
+    {
+      "archive_id": "module:normal_os.connectors.google_drive_connector",
+      "state": "limbo",
+      "layer": -1,
+      "totem": "lost",
+      "reason": "totem lost: backing failed: ModuleNotFoundError: No module named 'pydantic'",
+      "ascent_round": 0
+    },
+    {
+      "archive_id": "module:normal_os.connectors.notion_connector",
+      "state": "limbo",
+      "layer": -1,
+      "totem": "lost",
+      "reason": "totem lost: backing failed: ModuleNotFoundError: No module named 'pydantic'",
+      "ascent_round": 0
+    },
+    {
+      "archive_id": "module:normal_os.connectors.pc_bridge_connector",
+      "state": "limbo",
+      "layer": -1,
+      "totem": "lost",
+      "reason": "totem lost: backing failed: ModuleNotFoundError: No module named 'pydantic'",
+      "ascent_round": 0
+    },
+    {
+      "archive_id": "module:normal_os.connectors.registry",
+      "state": "limbo",
+      "layer": -1,
+      "totem": "lost",
+      "reason": "totem lost: backing failed: ModuleNotFoundError: No module named 'pydantic'",
+      "ascent_round": 0
+    },
+    {
+      "archive_id": "module:normal_os.core.coevolution",
+      "state": "limbo",
+      "layer": -1,
+      "totem": "lost",
+      "reason": "totem lost: backing failed: ModuleNotFoundError: No module named 'structlog'",
+      "ascent_round": 0
+    },
+    {
+      "archive_id": "module:normal_os.core.config",
+      "state": "limbo",
+      "layer": -1,
+      "totem": "lost",
+      "reason": "totem lost: backing failed: ModuleNotFoundError: No module named 'pydantic'",
+      "ascent_round": 0
+    },
+    {
+      "archive_id": "module:normal_os.core.models",
+      "state": "limbo",
+      "layer": -1,
+      "totem": "lost",
+      "reason": "totem lost: backing failed: ModuleNotFoundError: No module named 'pydantic'",
+      "ascent_round": 0
+    },
+    {
+      "archive_id": "module:normal_os.core.orchestrator",
+      "state": "limbo",
+      "layer": -1,
+      "totem": "lost",
+      "reason": "totem lost: backing failed: ModuleNotFoundError: No module named 'structlog'",
+      "ascent_round": 0
+    },
+    {
+      "archive_id": "module:normal_os.dashboard.app",
+      "state": "limbo",
+      "layer": -1,
+      "totem": "lost",
+      "reason": "totem lost: backing failed: ModuleNotFoundError: No module named 'fastapi'",
+      "ascent_round": 0
+    },
+    {
+      "archive_id": "module:normal_os.executor.task_executor",
+      "state": "limbo",
+      "layer": -1,
+      "totem": "lost",
+      "reason": "totem lost: backing failed: ModuleNotFoundError: No module named 'structlog'",
+      "ascent_round": 0
+    },
+    {
+      "archive_id": "module:normal_os.executor.worker_pool",
+      "state": "active",
+      "layer": 0,
+      "totem": "fell",
+      "reason": "reproducible backing, resting only on the waking world",
+      "ascent_round": 1
+    },
+    {
+      "archive_id": "module:normal_os.llm.router",
+      "state": "limbo",
+      "layer": -1,
+      "totem": "lost",
+      "reason": "totem lost: backing failed: ModuleNotFoundError: No module named 'httpx'",
+      "ascent_round": 0
+    },
+    {
+      "archive_id": "module:normal_os.optimization.advanced_qubo",
+      "state": "limbo",
+      "layer": -1,
+      "totem": "lost",
+      "reason": "totem lost: backing failed: ModuleNotFoundError: No module named 'dimod'",
+      "ascent_round": 0
+    },
+    {
+      "archive_id": "module:normal_os.optimization.qubo_solver",
+      "state": "limbo",
+      "layer": -1,
+      "totem": "lost",
+      "reason": "totem lost: backing failed: ModuleNotFoundError: No module named 'dimod'",
+      "ascent_round": 0
+    },
+    {
+      "archive_id": "module:normal_os.persistence.context_store",
+      "state": "limbo",
+      "layer": -1,
+      "totem": "lost",
+      "reason": "totem lost: backing failed: ModuleNotFoundError: No module named 'aiosqlite'",
+      "ascent_round": 0
+    },
+    {
+      "archive_id": "module:normal_os.persistence.faden_store",
+      "state": "limbo",
+      "layer": -1,
+      "totem": "lost",
+      "reason": "totem lost: backing failed: ModuleNotFoundError: No module named 'aiosqlite'",
+      "ascent_round": 0
+    },
+    {
+      "archive_id": "module:normal_os.persistence.task_store",
+      "state": "limbo",
+      "layer": -1,
+      "totem": "lost",
+      "reason": "totem lost: backing failed: ModuleNotFoundError: No module named 'aiosqlite'",
+      "ascent_round": 0
+    },
+    {
+      "archive_id": "module:normal_os.protocols",
+      "state": "active",
+      "layer": 0,
+      "totem": "fell",
+      "reason": "reproducible backing, resting only on the waking world",
+      "ascent_round": 2
+    },
+    {
+      "archive_id": "module:normal_os.protocols.__main__",
+      "state": "active",
+      "layer": 0,
+      "totem": "fell",
+      "reason": "reproducible backing, resting only on the waking world",
+      "ascent_round": 4
+    },
+    {
+      "archive_id": "module:normal_os.protocols.archive",
+      "state": "active",
+      "layer": 0,
+      "totem": "fell",
+      "reason": "reproducible backing, resting only on the waking world",
+      "ascent_round": 3
+    },
+    {
+      "archive_id": "module:normal_os.protocols.distiller",
+      "state": "active",
+      "layer": 0,
+      "totem": "fell",
+      "reason": "reproducible backing, resting only on the waking world",
+      "ascent_round": 2
+    },
+    {
+      "archive_id": "module:normal_os.protocols.inception",
+      "state": "active",
+      "layer": 0,
+      "totem": "fell",
+      "reason": "reproducible backing, resting only on the waking world",
+      "ascent_round": 2
+    },
+    {
+      "archive_id": "module:normal_os.protocols.injection",
+      "state": "active",
+      "layer": 0,
+      "totem": "fell",
+      "reason": "reproducible backing, resting only on the waking world",
+      "ascent_round": 1
+    },
+    {
+      "archive_id": "module:normal_os.protocols.manifest",
+      "state": "active",
+      "layer": 0,
+      "totem": "fell",
+      "reason": "reproducible backing, resting only on the waking world",
+      "ascent_round": 3
+    },
+    {
+      "archive_id": "module:normal_os.protocols.models",
+      "state": "active",
+      "layer": 0,
+      "totem": "fell",
+      "reason": "reproducible backing, resting only on the waking world",
+      "ascent_round": 1
+    },
+    {
+      "archive_id": "module:normal_os.protocols.runner",
+      "state": "active",
+      "layer": 0,
+      "totem": "fell",
+      "reason": "reproducible backing, resting only on the waking world",
+      "ascent_round": 3
+    },
+    {
+      "archive_id": "module:normal_os.protocols.totem",
+      "state": "active",
+      "layer": 0,
+      "totem": "fell",
+      "reason": "reproducible backing, resting only on the waking world",
+      "ascent_round": 1
+    },
+    {
+      "archive_id": "module:normal_os.structured_output",
+      "state": "limbo",
+      "layer": -1,
+      "totem": "lost",
+      "reason": "totem lost: backing failed: ModuleNotFoundError: No module named 'structlog'",
+      "ascent_round": 0
+    },
+    {
+      "archive_id": "source:normal_os",
+      "state": "active",
+      "layer": 0,
+      "totem": "fell",
+      "reason": "reproducible backing, resting only on the waking world",
+      "ascent_round": 1
+    },
+    {
+      "archive_id": "source:normal_os.agents.base",
+      "state": "active",
+      "layer": 0,
+      "totem": "fell",
+      "reason": "reproducible backing, resting only on the waking world",
+      "ascent_round": 1
+    },
+    {
+      "archive_id": "source:normal_os.agents.connector_agent",
+      "state": "active",
+      "layer": 0,
+      "totem": "fell",
+      "reason": "reproducible backing, resting only on the waking world",
+      "ascent_round": 1
+    },
+    {
+      "archive_id": "source:normal_os.agents.example_agents",
+      "state": "active",
+      "layer": 0,
+      "totem": "fell",
+      "reason": "reproducible backing, resting only on the waking world",
+      "ascent_round": 1
+    },
+    {
+      "archive_id": "source:normal_os.agents.registry",
+      "state": "active",
+      "layer": 0,
+      "totem": "fell",
+      "reason": "reproducible backing, resting only on the waking world",
+      "ascent_round": 1
+    },
+    {
+      "archive_id": "source:normal_os.bridge",
+      "state": "active",
+      "layer": 0,
+      "totem": "fell",
+      "reason": "reproducible backing, resting only on the waking world",
+      "ascent_round": 1
+    },
+    {
+      "archive_id": "source:normal_os.bridge.grok_pc_bridge",
+      "state": "active",
+      "layer": 0,
+      "totem": "fell",
+      "reason": "reproducible backing, resting only on the waking world",
+      "ascent_round": 1
+    },
+    {
+      "archive_id": "source:normal_os.cli.main",
+      "state": "active",
+      "layer": 0,
+      "totem": "fell",
+      "reason": "reproducible backing, resting only on the waking world",
+      "ascent_round": 1
+    },
+    {
+      "archive_id": "source:normal_os.connectors",
+      "state": "active",
+      "layer": 0,
+      "totem": "fell",
+      "reason": "reproducible backing, resting only on the waking world",
+      "ascent_round": 1
+    },
+    {
+      "archive_id": "source:normal_os.connectors.base",
+      "state": "active",
+      "layer": 0,
+      "totem": "fell",
+      "reason": "reproducible backing, resting only on the waking world",
+      "ascent_round": 1
+    },
+    {
+      "archive_id": "source:normal_os.connectors.github_connector",
+      "state": "active",
+      "layer": 0,
+      "totem": "fell",
+      "reason": "reproducible backing, resting only on the waking world",
+      "ascent_round": 1
+    },
+    {
+      "archive_id": "source:normal_os.connectors.google_drive_connector",
+      "state": "active",
+      "layer": 0,
+      "totem": "fell",
+      "reason": "reproducible backing, resting only on the waking world",
+      "ascent_round": 1
+    },
+    {
+      "archive_id": "source:normal_os.connectors.notion_connector",
+      "state": "active",
+      "layer": 0,
+      "totem": "fell",
+      "reason": "reproducible backing, resting only on the waking world",
+      "ascent_round": 1
+    },
+    {
+      "archive_id": "source:normal_os.connectors.pc_bridge_connector",
+      "state": "active",
+      "layer": 0,
+      "totem": "fell",
+      "reason": "reproducible backing, resting only on the waking world",
+      "ascent_round": 1
+    },
+    {
+      "archive_id": "source:normal_os.connectors.registry",
+      "state": "active",
+      "layer": 0,
+      "totem": "fell",
+      "reason": "reproducible backing, resting only on the waking world",
+      "ascent_round": 1
+    },
+    {
+      "archive_id": "source:normal_os.core.coevolution",
+      "state": "active",
+      "layer": 0,
+      "totem": "fell",
+      "reason": "reproducible backing, resting only on the waking world",
+      "ascent_round": 1
+    },
+    {
+      "archive_id": "source:normal_os.core.config",
+      "state": "active",
+      "layer": 0,
+      "totem": "fell",
+      "reason": "reproducible backing, resting only on the waking world",
+      "ascent_round": 1
+    },
+    {
+      "archive_id": "source:normal_os.core.models",
+      "state": "active",
+      "layer": 0,
+      "totem": "fell",
+      "reason": "reproducible backing, resting only on the waking world",
+      "ascent_round": 1
+    },
+    {
+      "archive_id": "source:normal_os.core.orchestrator",
+      "state": "active",
+      "layer": 0,
+      "totem": "fell",
+      "reason": "reproducible backing, resting only on the waking world",
+      "ascent_round": 1
+    },
+    {
+      "archive_id": "source:normal_os.dashboard.app",
+      "state": "active",
+      "layer": 0,
+      "totem": "fell",
+      "reason": "reproducible backing, resting only on the waking world",
+      "ascent_round": 1
+    },
+    {
+      "archive_id": "source:normal_os.executor.task_executor",
+      "state": "active",
+      "layer": 0,
+      "totem": "fell",
+      "reason": "reproducible backing, resting only on the waking world",
+      "ascent_round": 1
+    },
+    {
+      "archive_id": "source:normal_os.executor.worker_pool",
+      "state": "active",
+      "layer": 0,
+      "totem": "fell",
+      "reason": "reproducible backing, resting only on the waking world",
+      "ascent_round": 1
+    },
+    {
+      "archive_id": "source:normal_os.llm.router",
+      "state": "active",
+      "layer": 0,
+      "totem": "fell",
+      "reason": "reproducible backing, resting only on the waking world",
+      "ascent_round": 1
+    },
+    {
+      "archive_id": "source:normal_os.optimization.advanced_qubo",
+      "state": "active",
+      "layer": 0,
+      "totem": "fell",
+      "reason": "reproducible backing, resting only on the waking world",
+      "ascent_round": 1
+    },
+    {
+      "archive_id": "source:normal_os.optimization.qubo_solver",
+      "state": "active",
+      "layer": 0,
+      "totem": "fell",
+      "reason": "reproducible backing, resting only on the waking world",
+      "ascent_round": 1
+    },
+    {
+      "archive_id": "source:normal_os.persistence.context_store",
+      "state": "active",
+      "layer": 0,
+      "totem": "fell",
+      "reason": "reproducible backing, resting only on the waking world",
+      "ascent_round": 1
+    },
+    {
+      "archive_id": "source:normal_os.persistence.faden_store",
+      "state": "active",
+      "layer": 0,
+      "totem": "fell",
+      "reason": "reproducible backing, resting only on the waking world",
+      "ascent_round": 1
+    },
+    {
+      "archive_id": "source:normal_os.persistence.task_store",
+      "state": "active",
+      "layer": 0,
+      "totem": "fell",
+      "reason": "reproducible backing, resting only on the waking world",
+      "ascent_round": 1
+    },
+    {
+      "archive_id": "source:normal_os.protocols",
+      "state": "active",
+      "layer": 0,
+      "totem": "fell",
+      "reason": "reproducible backing, resting only on the waking world",
+      "ascent_round": 1
+    },
+    {
+      "archive_id": "source:normal_os.protocols.__main__",
+      "state": "active",
+      "layer": 0,
+      "totem": "fell",
+      "reason": "reproducible backing, resting only on the waking world",
+      "ascent_round": 1
+    },
+    {
+      "archive_id": "source:normal_os.protocols.archive",
+      "state": "active",
+      "layer": 0,
+      "totem": "fell",
+      "reason": "reproducible backing, resting only on the waking world",
+      "ascent_round": 1
+    },
+    {
+      "archive_id": "source:normal_os.protocols.distiller",
+      "state": "active",
+      "layer": 0,
+      "totem": "fell",
+      "reason": "reproducible backing, resting only on the waking world",
+      "ascent_round": 1
+    },
+    {
+      "archive_id": "source:normal_os.protocols.inception",
+      "state": "active",
+      "layer": 0,
+      "totem": "fell",
+      "reason": "reproducible backing, resting only on the waking world",
+      "ascent_round": 1
+    },
+    {
+      "archive_id": "source:normal_os.protocols.injection",
+      "state": "active",
+      "layer": 0,
+      "totem": "fell",
+      "reason": "reproducible backing, resting only on the waking world",
+      "ascent_round": 1
+    },
+    {
+      "archive_id": "source:normal_os.protocols.manifest",
+      "state": "active",
+      "layer": 0,
+      "totem": "fell",
+      "reason": "reproducible backing, resting only on the waking world",
+      "ascent_round": 1
+    },
+    {
+      "archive_id": "source:normal_os.protocols.models",
+      "state": "active",
+      "layer": 0,
+      "totem": "fell",
+      "reason": "reproducible backing, resting only on the waking world",
+      "ascent_round": 1
+    },
+    {
+      "archive_id": "source:normal_os.protocols.runner",
+      "state": "active",
+      "layer": 0,
+      "totem": "fell",
+      "reason": "reproducible backing, resting only on the waking world",
+      "ascent_round": 1
+    },
+    {
+      "archive_id": "source:normal_os.protocols.totem",
+      "state": "active",
+      "layer": 0,
+      "totem": "fell",
+      "reason": "reproducible backing, resting only on the waking world",
+      "ascent_round": 1
+    },
+    {
+      "archive_id": "source:normal_os.structured_output",
+      "state": "active",
+      "layer": 0,
+      "totem": "fell",
+      "reason": "reproducible backing, resting only on the waking world",
+      "ascent_round": 1
+    }
+  ]
+}

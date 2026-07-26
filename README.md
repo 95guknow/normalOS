@@ -18,6 +18,31 @@ All high-value practical functions from the Fusion Hero OS Horkrux have been ext
 - **GrokPCBridge** – Bidirectional local PC bridge (analog to PhoneBridge)
 - Docker ready
 
+## Inception Archive Protocol
+
+Aktiviert alle Archive des Mesh, indem es sie auf **Layer 0** hebt — die wache
+Welt. Ohne Abhängigkeiten, läuft mit nacktem Python 3.11.
+
+```bash
+PYTHONPATH=src python -m normal_os.protocols --root .
+```
+
+Jede Behauptung dieses Repos wird auf ihren realistischen Kern reduziert, gegen
+ein Abnahmekriterium zu einem heroischen Ziel geschärft und dann mit echtem
+Code unterfüttert. Was ohne Abnahmekriterium bleibt, bekommt keinen Code, der
+so tut, als gäbe es eins — es wird behalten, aber nicht behauptet.
+
+Ein Archiv wacht auf, wenn sein Code in zwei getrennten Interpretern
+reproduzierbar läuft **und** alles, worauf es ruht, ebenfalls wach ist.
+
+Aktueller Stand: [`INCEPTION_REPORT.md`](INCEPTION_REPORT.md) ·
+Details: [`docs/INCEPTION_PROTOCOL.md`](docs/INCEPTION_PROTOCOL.md)
+
+> Der erste Lauf hat gemeldet, dass die unten dokumentierten Kernmodule nicht
+> importierbar sind — unabhängig von installierten Paketen. Die Liste steht im
+> Report. Die Behauptungen bleiben bestehen, sie gelten nur nicht als belegt,
+> bis der Code sie trägt.
+
 ## GrokPCBridge (New in v1.0)
 
 The GrokPCBridge gives Grok / normalOS controlled, explicit access to your local Windows PC — especially the Desktop.

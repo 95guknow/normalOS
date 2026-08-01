@@ -5,9 +5,13 @@
 # Die Obergrenze <9 stammte aus der v8-Ära und schloss die laufende
 # Plattform aus — normalOS las sich damit als inkompatibel zum eigenen Mesh.
 # Getragen wird die Spanne von der Backward Compatibility Guarantee:
-# v10, v13 und v14 sind laut BEST_VERSION.md additiv über dem
+# v10, v13, v14 und v15 sind laut BEST_VERSION.md additiv über dem
 # v8.3-Funktionskern, den dieses Repo nutzt. Das ist eine abgeleitete
-# Zusage, kein Testbefund — gegen v13/v14 selbst ist hier nichts
+# Zusage, kein Testbefund — gegen v13/v14/v15 selbst ist hier nichts
 # verifiziert (Code Honesty). Die Plattform führt denselben Vorbehalt
 # als offenen Claim V14-BCG-UEBER-V13 in ihrer proof_registry.yaml.
-fuhos_compat: ">=8.3 <15"
+#
+# Hinweis: v14.0.0 und v15.0.0 sind bislang nicht getaggt; letztes
+# veröffentlichtes Release der Plattform ist v13.0.0. Die Obergrenze
+# nimmt also einen Stand vorweg, den es öffentlich noch nicht gibt.
+fuhos_compat: ">=8.3 <16"

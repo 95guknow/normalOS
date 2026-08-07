@@ -1,10 +1,20 @@
-# normalOS v1.0
+# normalOS v2.0
 
 **Clean, explicit, production-oriented orchestration and optimization platform.**
 
 All high-value practical functions from the Fusion Hero OS Horkrux have been extracted, normalized, and made explicit.
 
-## Included Core Capabilities (v1.0)
+## Versionslinie (ab v2.0 eigenständig)
+
+`VERSION` im Root ist ab v2.0 die einzige Quelle der Wahrheit für normalOS. Alle Manifeste folgen ihr: `pyproject.toml` und `src/normal_os/__init__.py`.
+
+**Was v2.0 benennt:** eine Zählung statt drei. Bis v2.0 führte dieses Repository drei widersprüchliche Versionsmarker — README `v1.0`, `pyproject.toml` `0.5.0`, `__init__.py` `0.1.0`. Der Ära-Inhalt von v2.0 ist genau deren Vereinheitlichung; der Sprung ist damit gedeckt, nicht bloß gesetzt.
+
+**Entkopplung:** normalOS zählt **getrennt** von der Fusion-Hero-OS-Plattformversion. `normalOS v2.0` ist nicht `Plattform v20` — die Zahlen stehen zufällig nebeneinander, nicht in Beziehung. Wo dieses Repository die Fusion-Hero-OS-Version nennt (etwa `PUBLIC_STATUS.md`), ist das ein Verweis auf ein anderes Produkt, keine eigene Zählung.
+
+Signatur-Trigger: `=====NormalOS` (registriert in `ops_vocabulary.yaml` → `signatures.normalos` im Fusion-Hero-OS-Repo, implementiert in `fusion_hero_os/core/persona_signature.py`).
+
+## Included Core Capabilities (seit v1.0, unverändert in v2.0)
 
 - Async Task Execution with retry, cancellation, resource budgeting
 - Persistent Task + Faden/Context + History storage

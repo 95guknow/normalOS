@@ -1,7 +1,9 @@
-# PUBLIC STATUS – Fusion Hero OS (v15)
+# PUBLIC STATUS – Fusion Hero OS (v20)
 
-> **Stand:** v15.2.0 · 2026-08-02 · Policy unverändert gültig  
-> Kanonisch im Repo; letztes veröffentlichtes Release-Tag: `v13.0.0` — v14.0.0, v15.0.0 und v15.2.0 sind noch nicht getaggt
+> **Stand:** v20.0.0 · 2026-08-07 · Policy unverändert gültig  
+> Kanonisch im Repo; letztes veröffentlichtes Release-Tag: `v13.0.0` — v14.0.0, v15.0.0, v15.2.0 und v20.0.0 sind noch nicht getaggt
+>
+> **Hinweis zur Zählung:** Die hier genannte Version ist die **Fusion-Hero-OS-Plattformversion**, nicht die von normalOS. normalOS zählt ab v2.0 eigenständig (`VERSION` im Root dieses Repos). `normalOS v2.0` ist nicht `Plattform v20`.
 
 **Gültig ab sofort und permanent:**
 
